@@ -100,6 +100,12 @@ afterEvaluate {
             create<MavenPublication>("variants-release") {
                 from(components.getByName("release"))
             }
+
+            // Creates a Maven publication called "release".
+            create<MavenPublication>("release") {
+                // Applies the component for the release build variant.
+                from(components.getByName("release"))
+            }
         }
 
         repositories {
